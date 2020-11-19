@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scrollytelling template</title>
+	<script src="https://unpkg.com/enter-view"></script>
+</head>
+<style type="text/css">
+body, html {
+	font-family:"Helvetica-Neue", sans-serif;
+	top:0;
+	left:0;
+	margin:0;
+	color:#1d1d1d;
+}
+#featured {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  overflow:none;
+}
+.aligner {
+	max-width:80%;
+}
+#featured .title{
+	text-align:center;
+	margin-top:5%;
+	width:100%;
+}
+.title h2 {
+	font-size:1em;
+	font-weight:400;
+}
+#featured img {
+  width:100%;
+}
+#scroll {
+  font-stretch:expanded;
+  text-align:center;
+  width:80%;
+  position:absolute;
+  bottom:10%;
+  font-size:6em;
+  color:#1d1d1d;
+  cursor:pointer;
+  transition:0.5s all ease-in-out;
+  line-height:0.5em;
+}
+#scroll:hover {
+  transform:scale(1.2);
+  transform-origin:50% 30%;
+}
+.section{
+  opacity:0;
+  width:90%;
+  height:auto;
+  padding:5%;
+  margin-bottom:0%;
+  padding-bottom:0%;
+  line-height:2em;
+  transform:translateY(5em);
+  transition:0.5s ease-in-out;
+  margin:auto;
+}
+.section img {
+	width:100%;
+}
+.entered {
+  transform:translateY(0em);
+  opacity:1;
+}
+.tableauPlaceholder {
+	height:50vh;
+}
+.scrollpost {
+	width:100%;
+	padding:0;
+	margin:0;
+	overflow-x:scroll;
+	overflow-y:hidden;
+	white-space:nowrap;
+}
+.scrollpost img {
+	width:25%;
+	display:inline-block;
+	margin:0% 4% 0% 0%;
+}
+.open {
+	position:relative;
+		text-align:center;
+	margin:auto;
+}
+.open:hover .overlay{
+	opacity:0.8;
+}
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity:0;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	cursor:pointer;
+	transition:0.5s ease-in-out;
+}
+.open img {
+	width:80%;
+}
+
+.overlay h2 {
+	color:white;
+	background-color:none;
+	margin:auto;
+}
+#final {
+	margin-bottom:5%;
+}
+.open a {
+	text-decoration:none;
+	background-color:none;
+	padding:2% 4%;
+	cursor:pointer;
+	border:0.05em solid white;
+	transition:0.5s ease-in-out;
+}
+.open a:hover {
+	background-color:white;
+}
+.open a:hover h2{
+	color:#1d1d1d;
+}
+@media screen and (max-width:767px){
+	#featured img {
+		margin-left:-50%;
+		bottom:0;
+		position:absolute;
+		width:200%;
+		z-index:0;
+	}
+	#featured .title {
+		z-index:1;
+	}
+	.scrollpost img {
+		width:70%;
+	}
+}
+</style>
+<body>
+
+<div id="featured">
+	<div class="aligner">
+		<div class="title">
+		<h1>Ramen Ratings Around the World</h1>
+		<h2>Xingyu Wang</h2>
+		</div>
+	  	<img src="assets/featured/cover.jpeg">
+	 	 <div id="scroll">&#xfe40;</div>	
+	</div>
+</div>
+
+<!-- Simple text intro -->
+<div class="section" id="first">
+	<h1>About the project</h1>
+	<p>My project is about ratings and the review different brand of ramen around the world have and I would find out what countries have the most reviews and highly rated ramen. Some big takeways from my project would be that Southeast Asia have a really big market in the number of Ramen brands they have. </p>
+</div>
+
+<!-- About the data carousel -->
+<div class="section">
+	<h1>About the data</h1>
+	<p>The data was found on Kaggle by Aleksey Bilogur three years ago. </p>
+	<!-- the scrolling post holder -->
+	<div class="scrollpost">
+
+	</div>
+</div>
+
+<div class="section">
+	<h1>Numbers of Review Each Brand of Ramen Received</h1>
+	<img src="assets/casestudy/review and brand.jpg">
+</div>
+
+<div class="section">
+	<h1>Top Ten Ramen Brands With the Most Reviews and the Number of Star Ratings They Received</h1>
+	<img src="assets/Top ten/Top 10 stars and brand.jpg">
+</div>
+
+
+<!-- About the data carousel -->
+<div class="section">
+	<h1>Top Ten Brands</h1>
+	<!-- the scrolling post holder -->
+	<div class="scrollpost">
+		<img src="assets/months/nissin.png">
+		<img src="assets/months/nongshim.jpg">
+		<img src="assets/months/samyang.jpg">
+		<img src="assets/months/maruchan.png">
+		<img src="assets/months/mama.jpg">
+		<img src="assets/months/myojo.jpg">
+		<img src="assets/months/koka.jpg">
+		<img src="assets/months/paldo.jpeg">
+		<img src="assets/months/MAMA.jpg">
+		<img src="assets/months/mykuali.jpg">
+	</div>
+</div>
+
+<div class="section">
+	<h1>Top Ten Brands With the Average Amount of Stars They Received</h1>
+	<img src="assets/casestudy/sheet 11.jpg">
+</div>
+
+<div class="section">
+	<h1>Takeaways</h1>
+	<p>Overall Mykuali received the highest amount of stars out of the ten brands. 
+	Maruchan has the least amount of stars.
+	Nissin, which has the most number of reviews received the average of 3.8.
+	Therefore,the number of reviews ramen brandws received will does not establish a relationship with their star ratings.  </p>
+
+	<img src="assets/casestudy/ramen eating.png">
+</div>
+
+
+
+
+</body>
+<script type="text/javascript">
+
+scroll=document.querySelector('#scroll');
+setup = document.querySelector('#first');
+scroll.onclick=function() {
+    first.scrollIntoView({ 
+    behavior: 'smooth',
+    block: "start",
+  });
+};
+
+enterView({
+  selector: '.section',
+  enter: function(el) {
+    el.classList.add('entered');
+  },
+  exit: function(el) {
+    el.classList.remove('entered');
+  },
+  progress: function(el, progress) {
+
+  },
+  offset: 0.2, // enter at middle of viewport
+});
+
+</script>
+</html>
